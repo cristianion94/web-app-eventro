@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventro</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your personal event organiser">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Summer Jazz</span>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Eventro</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Edit favorites</a>
+                <a class="mdl-navigation__link" href="">Profile</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col">
+                    <ul class="demo-list-item mdl-list demo-list-two">
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-avatar">person</i>
+                                <span>Organiser</span>
+                                <span class="mdl-list__item-sub-title">Opera Iasi</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-avatar">today</i>
+                                <span>Date</span>
+                                <span class="mdl-list__item-sub-title">18 May 2017, 07:00 PM</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-avatar">collections</i>
+                                <span>Available no. of tickets</span>
+                                <span class="mdl-list__item-sub-title">100</span>
+                            </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-avatar">store</i>
+                                <span>Price</span>
+                                <span class="mdl-list__item-sub-title">20 RON</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <button id ="buy-tickets"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                        RESERVE TICKETS
+                    </button>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col"></div>
+            </div>
+        </main>
+    </div>
+    <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Buy tickets</h4>
+        <div class="mdl-dialog__content">
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="number">
+                    <label class="mdl-textfield__label" for="number">No. of tickets</label>
+                </div>
+            </form>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button">Buy</button>
+            <button type="button" class="mdl-button close">Cancel</button>
+        </div>
+    </dialog>
+
+    <script>
+        var dialog = document.querySelector('dialog');
+        var showDialogButton = document.querySelector('#buy-tickets');
+        if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+        }
+        showDialogButton.addEventListener('click', function () {
+            dialog.showModal();
+        });
+        dialog.querySelector('.close').addEventListener('click', function () {
+            dialog.close();
+        });
+    </script>
+</body>
+</html>

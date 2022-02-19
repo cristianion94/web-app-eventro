@@ -1,0 +1,11 @@
+env: flex
+runtime: nodejs
+service: event-scheduler
+env_variables:
+  MYSQL_USER: monica
+  MYSQL_PASSWORD: iasilocalevents
+  MYSQL_DATABASE: eventro
+  INSTANCE_CONNECTION_NAME: iasilocalevents:europe-west1:iasilocalevents
+
+beta_settings:
+  cloud_sql_instances: iasilocalevents:europe-west1:iasilocalevents

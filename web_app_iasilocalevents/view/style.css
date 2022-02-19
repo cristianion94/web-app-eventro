@@ -1,0 +1,64 @@
+.mdl-layout__content {
+    overflow: visible !important;
+}
+
+
+/*layout*/
+.demo-layout-transparent .mdl-layout__header {
+    background: url('assets/people-eiffel-tower-lights-night.jpg') center / cover;
+    height: 300px;
+    overflow: hidden;
+    display: flex !important;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+        color: white;
+    }
+
+.demo-list-two {
+    width: 300px;
+}
+/*cards*/
+.demo-card-wide.mdl-card {
+    width: 100%;
+}
+
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+}
+
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+
+.demo-card-1 > .mdl-card__title {
+    background: url('assets/people-eiffel-tower-lights-night.jpg') center / cover;
+}
+
+.demo-card-2 > .mdl-card__title {
+    background: url('assets/pexels-photo-66463.jpeg') center / cover;
+}
+
+.demo-card-3 > .mdl-card__title {
+    background: url('assets/pexels-photo-348517.jpeg') center / cover;
+}
+
+.demo-card-4 > .mdl-card__title {
+    background: url('assets/pexels-photo-109669.jpeg') center / cover;
+}
+
+/*form card*/
+.form-card > .mdl-card__title {
+    height: auto;
+    color: #000;
+}
+
+.mdl-layout__content .mdl-textfield {
+    display: block !important;
+    width: 100% !important;
+}
